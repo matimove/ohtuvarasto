@@ -1,3 +1,3 @@
 # ohtuvarasto
 
-![Actions status](https://github.com/matimove/ohtuvarasto/actions/badge.svg)
+![Actions status](https://github.com/matimove/ohtuvarasto/actions)
