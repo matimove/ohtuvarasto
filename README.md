@@ -1,1 +1,3 @@
 # ohtuvarasto
+
+![GHA Workflow Badge](https://github.com/matimove/ohtuvarasto/workflows/CI/badge.svg)
