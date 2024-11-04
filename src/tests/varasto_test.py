@@ -71,7 +71,7 @@ class TestVarasto(unittest.TestCase):
         
         self.varasto.ota_varastosta(7)
         
-        self.assertEqual(self.varasto.paljonko_mahtuu(), 10)
+        self.assertEqual(self.varasto.paljonko_mahtuu(), -10)
 
     def test_tulostus_näkyy_oikein(self):
         self.varasto.lisaa_varastoon(6)
