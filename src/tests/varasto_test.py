@@ -44,17 +44,17 @@ class TestVarasto(unittest.TestCase):
         self.varasto = Varasto(-2,-2)
         self.assertEqual(self.varasto.paljonko_mahtuu(), 0.0)
 
-    def test_konstruktori_hukkaa_ylimääräisen_saldon(self):
+    def test_konstruktori_hukkaa_ylimaaraisen_saldon(self):
         """Testaa ylimääräistä saldoa"""
         self.varasto = Varasto(2,4)
         self.assertEqual(self.varasto.paljonko_mahtuu(), 0.0)
 
-    def test_negatiivinen_lisäys_ei_vaikuta(self):
+    def test_negatiivinen_lisays_ei_vaikuta(self):
         """Testaa negatiivista lisäystä"""
         self.varasto.lisaa_varastoon(-8)
         self.assertEqual(self.varasto.paljonko_mahtuu(), 10)
 
-    def test_ylimääräinen_saldo_lisäys_hukkaan(self):
+    def test_ylimaarainen_saldo_lisays_hukkaan(self):
         """Testaa ylimääräistä saldoa"""
         self.varasto.lisaa_varastoon(12)
         self.assertEqual(self.varasto.paljonko_mahtuu(), 0)
@@ -65,13 +65,13 @@ class TestVarasto(unittest.TestCase):
         self.varasto.ota_varastosta(-2)
         self.assertEqual(self.varasto.paljonko_mahtuu(), 4)
 
-    def test_otetaan_kaikki_mitä_voidaan_saldosta(self):
+    def test_otetaan_kaikki_mita_voidaan_saldosta(self):
         """Testataan kaiken ottamista"""
         self.varasto.lisaa_varastoon(6)
         self.varasto.ota_varastosta(7)
         self.assertEqual(self.varasto.paljonko_mahtuu(), 10)
 
-    def test_tulostus_näkyy_oikein(self):
+    def test_tulostus_nakyy_oikein(self):
         """Testataan tulostusta"""
         self.varasto.lisaa_varastoon(6)
         self.assertEqual(str(self.varasto), "saldo = 6, vielä tilaa 4")
